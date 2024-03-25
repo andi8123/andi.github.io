@@ -33,7 +33,7 @@ function addUnicorns() {
     // Iterasi melalui setiap objek data dan kirim permintaan POST
     newUnicorns.forEach((newUnicorn) => {
       fetch(
-        "https://crudcrud.com/api/56ba45465ba64b858700e9757bf3fb73/unicorns/",
+        "https://crudcrud.com/api/17af69a73f4945e0a40d7b743f20232f/unicorns/",
         {
           method: "POST",
           headers: {
@@ -59,7 +59,7 @@ function addUnicorns() {
     const unicornId = document.getElementById("unicornIdInput").value;
 
     fetch(
-      `https://crudcrud.com/api/56ba45465ba64b858700e9757bf3fb73/unicorns/${unicornId}`,
+      `https://crudcrud.com/api/17af69a73f4945e0a40d7b743f20232f/unicorns/${unicornId}`,
       {
         method: "DELETE",
       }
@@ -90,7 +90,7 @@ function addUnicorns() {
 
   // Ambil data saat halaman dimuat
   fetch(
-    "https://crudcrud.com/api/56ba45465ba64b858700e9757bf3fb73/unicorns/"
+    "https://crudcrud.com/api/17af69a73f4945e0a40d7b743f20232f/unicorns/"
   )
     .then((response) => response.json())
     .then((data) => {
