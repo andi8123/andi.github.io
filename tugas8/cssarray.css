@@ -1,0 +1,148 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  header {
+    background-image: url("back.jpg");
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+
+  header h1 {
+    margin: 0;
+  }
+
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  nav ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .landing-page {
+    background-image: url("back.jpg");
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .carousel-container {
+    max-width: 600px;
+    overflow: hidden;
+  }
+
+  .carousel-slide {
+    display: flex;
+  }
+
+  .carousel-slide img {
+    width: 100%;
+    transition: transform 0.5s ease;
+  }
+
+  .prev-btn,
+  .next-btn {
+    background: rgb(0, 255, 98);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 99%;
+    transform: translateY(-50%);
+  }
+
+  .prev-btn {
+    left: 100px;
+  }
+
+  .next-btn {
+    right: 100px;
+  }
+
+  .welcome-text {
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .welcome-text h2 {
+    font-size: 3em;
+    color: white;
+  }
+
+  .welcome-text h3 {
+    font-size: 1em;
+    color: white;
+  }
+
+  .welcome-text p {
+    font-size: 1.5em;
+    color: white;
+  }
+
+  .text {
+    font-size: 1em;
+    color: black;
+  }
+
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .cta-button {
+    background-color: #007bff;
+  }
+  /* Product styling */
+  /* Gaya untuk produk */
+  #productContainer {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .product {
+    width: 300px;
+    margin: 10px;
+    border: 4px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 40px;
+    background-color: black;
+  }
+
+  .product img {
+    width: 100%;
+    height: auto;
+  }
+
+  .product > div {
+    margin-bottom: 5px;
+  }
+
+  .isi {
+    background-color: black;
+  }
+
+  /* Footer styling */
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    width: auto;
+  }

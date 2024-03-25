@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Input Data dengan JavaScript</title>
+<link rel="stylesheet" href="jsdasar.css">
+</head>
+<body>
+
+<h2>Input Data dengan JavaScript</h2>
+
+<!-- Input Teks -->
+<label for="text-input">Teks:</label>
+<input type="text" id="text-input"><br><br>
+
+<!-- Input Angka -->
+<label for="number-input">Angka:</label>
+<input type="number" id="number-input"><br><br>
+
+<!-- Input Tanggal -->
+<label for="date-input">Tanggal:</label>
+<input type="date" id="date-input"><br><br>
+
+<!-- Input Checkbox -->
+<label for="checkbox-input">Checkbox:</label><br>
+<label for="checkbox-input1">Pilihan 1:</label>
+<input type="checkbox" id="checkbox-input1" value="Pilihan 1"><br>
+
+<label for="checkbox-input2">Pilihan 2:</label>
+<input type="checkbox" id="checkbox-input2" value="Pilihan 2"><br>
+
+<label for="checkbox-input3">Pilihan 3:</label>
+<input type="checkbox" id="checkbox-input3" value="Pilihan 3"><br>
+
+<!-- Input Radio Button -->
+<label>Jenis Kelamin:</label><br>
+<label for="male">Laki-laki</label>
+<input type="radio" id="male" name="jenis-kelamin" value="Laki-laki">
+<label for="female">Perempuan</label>
+<input type="radio" id="female" name="jenis-kelamin" value="Perempuan"><br><br>
+
+<!-- Input Select -->
+<label for="select-input">Pilihan:</label>
+<select id="select-input">
+  <option value="option1">option1</option>
+  <option value="option2">option2</option>
+  <option value="option3">option3</option>
+</select><br><br>
+
+<!-- Tombol Submit -->
+<button onclick="displayInput()">Submit</button>
+
+<!-- Output -->
+<div id="output"></div>
+
+<div>
+  <h2>Kalkulator Sederhana</h2>
+
+<div>
+  <input type="text" id="display">
+</div>
+
+<div>
+  <input type="button" value="7" onclick="appendToDisplay('7')">
+  <input type="button" value="8" onclick="appendToDisplay('8')">
+  <input type="button" value="9" onclick="appendToDisplay('9')">
+  <input type="button" value="/" onclick="appendToDisplay('/')">
+</div>
+
+<div>
+  <input type="button" value="4" onclick="appendToDisplay('4')">
+  <input type="button" value="5" onclick="appendToDisplay('5')">
+  <input type="button" value="6" onclick="appendToDisplay('6')">
+  <input type="button" value="*" onclick="appendToDisplay('*')">
+</div>
+
+<div>
+  <input type="button" value="1" onclick="appendToDisplay('1')">
+  <input type="button" value="2" onclick="appendToDisplay('2')">
+  <input type="button" value="3" onclick="appendToDisplay('3')">
+  <input type="button" value="-" onclick="appendToDisplay('-')">
+</div>
+
+<div>
+  <input type="button" value="0" onclick="appendToDisplay('0')">
+  <input type="button" value="." onclick="appendToDisplay('.')">
+  <input type="button" value="=" onclick="calculate()">
+  <input type="button" value="+" onclick="appendToDisplay('+')">
+</div>
+
+<div>
+  <input type="button" value="Clear" onclick="clearDisplay()">
+</div>
+</div>
+
+<div>
+  <h2>Perulangan Kata dengan JavaScript</h2>
+
+<div>
+  <label for="word">Kata:</label>
+  <input type="text" id="word">
+</div>
+
+<div>
+  <label for="repeat">Ulangi Sebanyak:</label>
+  <input type="number" id="repeat">
+</div>
+
+<button onclick="repeatWord()">Ulangi</button>
+
+<div id="result">
+  <!-- Hasil perulangan akan ditampilkan di sini -->
+</div>
+</div>
+
+<div>
+  <h2>Periksa Kelulusan dengan JavaScript</h2>
+
+<div>
+  <label for="nilai">Masukkan Nilai:</label>
+  <input type="number" id="nilai">
+</div>
+
+<button onclick="checkPassingGrade()">Periksa</button>
+
+<div id="hasil">
+  <!-- Hasil kelulusan akan ditampilkan di sini -->
+</div>
+</div>
+
+<script src="jsdasar.js">
+</script>
+
+</body>
+</html>

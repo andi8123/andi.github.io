@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="forms.css">
+</head>
+<body>
+    <form id="myForm">
+        <p id="form">Formulir</p>
+        
+        <p>Nama<br>
+        <input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda"></p>
+        
+        <p>Email<br>
+        <input type="text" id="email" name="email" placeholder="Masukkan email Anda"></p>
+        
+        <p>Nomor HP<br>
+        <input type="text" id="nomor_handphone" name="nomor_handphone" placeholder="Masukkan nomor handphone Anda"></p>
+        
+        <p>Jenis Kelamin:<br>
+        <input type="radio" id="laki-laki" name="jenis-kelamin" value="laki-laki">
+        <label for="laki-laki">Laki-laki</label><br>
+        <input type="radio" id="perempuan" name="jenis-kelamin" value="perempuan">
+        <label for="perempuan">Perempuan</label></p>
+
+        <p for="selectionprodi">Prodi:<br>
+        <select id="selectionprodi" name="selectionprodi">
+            <option value="manajemen">pilih</option>
+            <option value="informasi">Informasi</option>
+            <option value="informatika">Informatika</option>
+        </select></p>
+
+        <p>Hobi :<br>
+            <input type="checkbox" id="membaca" name="hobi" value="membaca">
+            <label for="membaca">Membaca</label><br>
+            <input type="checkbox" id="menulis" name="hobi" value="menulis">
+            <label for="menulis">Menulis</label><br>
+            <input type="checkbox" id="bernyanyi" name="hobi" value="bernyanyi">
+            <label for="bernyanyi">Bernyanyi</label><br>
+            <input type="checkbox" id="olahraga" name="hobi" value="olahraga">
+            <label for="olahraga">Olahraga</label></p>
+
+        <p>Alamat<br>
+            <textarea class="form-control" rows="3" id="alamat" placeholder="Alamat Lengkap"></textarea></p>
+
+        <p>Foto Diri<br>
+            <input type="file" id="foto" name="foto"></p>
+
+        <button type="button" id="daftarBtn">Daftar</button>
+    </form>
+
+    <div id="output"></div>
+
+    <script>
+        document.getElementById("daftarBtn").addEventListener("click", function() {
+            var nama = document.getElementById("nama").value;
+            var email = document.getElementById("email").value;
+            var nomorHandphone = document.getElementById("nomor_handphone").value;
+            var jenisKelamin = document.querySelector('input[name="jenis-kelamin"]:checked').value;
+            var prodi = document.getElementById("selectionprodi").value;
+            var hobi = [];
+            document.querySelectorAll('input[name="hobi"]:checked').forEach(function(checkbox) {
+                hobi.push(checkbox.value);
+            });
+            var alamat = document.getElementById("alamat").value;
+            var fotoInput = document.getElementById("foto");
+            var foto = fotoInput.files[0];
+            
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                var fotoUrl = e.target.result;
+                var output = "<img src='" + fotoUrl + "' alt='Foto Diri'>";
+                output += "<br>Nama: " + nama + "<br>" +
+                          "Email: " + email + "<br>" +
+                          "Nomor HP: " + nomorHandphone + "<br>" +
+                          "Jenis Kelamin: " + jenisKelamin + "<br>" +
+                          "Prodi: " + prodi + "<br>" +
+                          "Hobi: " + hobi.join(", ") + "<br>" +
+                          "Alamat: " + alamat;
+
+                document.getElementById("output").innerHTML = output;
+            };
+            reader.readAsDataURL(foto);
+        });
+    </script>
+</body>
+</html>

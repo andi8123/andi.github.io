@@ -1,0 +1,107 @@
+    /* Header styling */
+    header {
+      background-image: url('back.jpg');
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      bottom: 0;
+      width: 100%;
+  }
+
+  .container {
+    background-image: url('back.jpg');
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+}
+
+    /* Carousel container */
+    .carousel {
+      width: 70%;
+      margin: auto;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Slides */
+    .carousel .slide {
+      display: none;
+      width: 100%;
+      text-align: center;
+    }
+
+    /* Active slide */
+    .carousel .slide.active {
+      display: block;
+    }
+
+    /* Navigation buttons */
+    .carousel-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    
+
+    /* Main content styling */
+    .main-content {
+      text-align: center;
+      margin: 50px auto;
+      max-width: 800px;
+    }
+
+    /* Button styling */
+    .btn {
+      display: inline-block;
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+
+    .btn:hover {
+      background-color: #555;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      bottom: 0;
+      width: 100%;
+  }
+
+  .welcome-text {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .welcome-text h2 {
+    font-size: 3em;
+    color: white;
+  }
+
+  .welcome-text h3 {
+    font-size: 1em;
+    color: white;
+  }
+  
+  .welcome-text p {
+    font-size: 1.5em;
+    color: white;
+  }
+
+  .prev, .next {
+    background: rgb(0, 255, 98);
+    color: white;
+    
+  }
